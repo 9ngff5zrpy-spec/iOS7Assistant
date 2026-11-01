@@ -1,0 +1,41 @@
+diff --git a/src/idevicerestore.c b/src/idevicerestore.c
+index 11d7ec4..c0d7da3 100644
+--- a/src/idevicerestore.c
++++ b/src/idevicerestore.c
+@@ -1410,6 +1410,27 @@ int idevicerestore_start(struct idevicerestore_client_t* client)
+ 		return -1;
+ 	}
+ 
++	int preserve_ios7_ibec = 0;
++	const char *preserve_ibec = getenv("CODEX_PRESERVE_IOS7_IBEC");
++	if (preserve_ibec && strcmp(preserve_ibec, "1") == 0) {
++		char *iboot_version = NULL;
++		if (client->mode != MODE_RECOVERY || !client->device ||
++		    strcmp(client->device->product_type, "iPhone6,2") != 0 ||
++		    ((!client->recovery || !client->recovery->client) && recovery_client_new(client) < 0)) {
++			logger(LL_ERROR, "Preserving iBEC requires iPhone6,2 already in Recovery.\n");
++			return -2;
++		}
++		irecv_getenv(client->recovery->client, "build-version", &iboot_version);
++		if (!iboot_version || strcmp(iboot_version, "iBoot-1940.10.58") != 0) {
++			logger(LL_ERROR, "Expected iOS 7.1.2 iBEC (iBoot-1940.10.58); refusing to continue.\n");
++			free(iboot_version);
++			return -2;
++		}
++		free(iboot_version);
++		preserve_ios7_ibec = 1;
++		logger(LL_INFO, "Keeping the verified iOS 7.1.2 iBEC already running in Recovery.\n");
++	}
++
+ 	if (client->mode == MODE_DFU) {
+ 		// if the device is in DFU mode, place it into recovery mode
+ 		dfu_client_free(client);
+@@ -1436,7 +1457,7 @@ int idevicerestore_start(struct idevicerestore_client_t* client)
+ 				plist_free(client->tss);
+ 			return -2;
+ 		}
+-	} else if (client->mode == MODE_RECOVERY) {
++	} else if (client->mode == MODE_RECOVERY && !preserve_ios7_ibec) {
+ 		// device is in recovery mode
+ 		if ((client->build_major > 8) && !(client->flags & FLAG_CUSTOM)) {
+ 			if (!client->image4supported) {
