@@ -1,0 +1,85 @@
+{
+  "firmwareURL": "https://secure-appldnld.apple.com/iOS8.1/031-09453.20141020.XRmMG/iPhone6,2_8.1_12B411_Restore.ipsw",
+  "components": [
+    {
+      "name": "iBSS",
+      "file": "iBSS.n53.RELEASE.im4p",
+      "path": "Firmware/dfu/iBSS.n53.RELEASE.im4p",
+      "key": "d28ae6dbbbfbea9c6c554a77d2bd23a3c8afe3ba91edfc60b61a11332248093fa450dba5ba6716130ae0eeb1877da8ec",
+      "sha256": "7525340136c1a847e34359e81c2e5733341d0a18f3796e801538e0827fef0f48"
+    },
+    {
+      "name": "iBEC",
+      "file": "iBEC.n53.RELEASE.im4p",
+      "path": "Firmware/dfu/iBEC.n53.RELEASE.im4p",
+      "key": "5932de57964433b58d94b8eb58246ddc5b1ee9b665612a50f54001f3e83524a70fc39380016ba477e150bfb4a8267f33",
+      "sha256": "d901fb05b6057c8b4d3fa955b49ed7200f4ec2142177c0dc07630dcaadeb98eb"
+    },
+    {
+      "name": "DeviceTree",
+      "file": "DeviceTree.n53ap.im4p",
+      "path": "Firmware/all_flash/all_flash.n53ap.production/DeviceTree.n53ap.im4p",
+      "key": "83e51efa2c8429633311c4742052485c900c0a198d8d35e874ea8e24698b5c954d93493b504d1c43a411e1f7df6d701b",
+      "sha256": "93bb45a8bd06e9776b4e3c9e5773431450e0a16383b29f1a98a7b949292c7664"
+    },
+    {
+      "name": "Kernelcache",
+      "file": "kernelcache.release.n53",
+      "path": "kernelcache.release.n53",
+      "key": "c8b3d417d03508019f5551c77779c2e8ae834d75ab7f7d7ff73549c629f75234a26da613dd276bfec3512097bc4a22b9",
+      "sha256": "fcc9bc4fa0e46e28122424b25968e3d598d1ac1630e2a83b7175fe51eaf9fa95"
+    },
+    {
+      "name": "RestoreRamdisk",
+      "file": "058-05134-079.dmg",
+      "path": "058-05134-079.dmg",
+      "key": "676ad9e982938ef6ab31f040d6e42af912c3a421dda3a2d05ea5225395f14c2c9d3ee041c9b1d5931fc8d21e897abd80",
+      "sha256": "7abf056cb55bfd5695bee2e37f93c9f48b95b042e6d2036775cbfeed68ca4af2"
+    }
+  ],
+  "assets": [
+    {
+      "file": "freeze.tar.gz",
+      "url": "https://raw.githubusercontent.com/LukeZGD/Legacy-iOS-Kit/23622f8fe72c09952089d5145a7b008cfcc90d9b/resources/jailbreak/freeze.tar.gz",
+      "sha256": "15ed578226ffe74371ff7c3d2665a99f181c5597ed1aee5d95a9ef5da17a836f"
+    },
+    {
+      "file": "nopatcyh.tar",
+      "url": "https://raw.githubusercontent.com/LukeZGD/Legacy-iOS-Kit/23622f8fe72c09952089d5145a7b008cfcc90d9b/resources/jailbreak/nopatcyh.tar",
+      "sha256": "838e9d7a22779840d00b87742fdcde9d8875aed909dbe1e8e46870d006c191d9"
+    },
+    {
+      "file": "panguaxe.tar",
+      "url": "https://raw.githubusercontent.com/LukeZGD/Legacy-iOS-Kit/23622f8fe72c09952089d5145a7b008cfcc90d9b/resources/jailbreak/panguaxe.tar",
+      "sha256": "4931fcc58f3d7b422c1464219ed66c90c7c49a57e491c88b579cf86e4e17f9f0"
+    },
+    {
+      "file": "openssh.tar.gz",
+      "url": "https://raw.githubusercontent.com/LukeZGD/Legacy-iOS-Kit/23622f8fe72c09952089d5145a7b008cfcc90d9b/resources/jailbreak/openssh.tar.gz",
+      "sha256": "96d7ecd8b71cfafe3e722cebc5a635b0484544fa1d453cbda98c35a4f091b293"
+    },
+    {
+      "file": "openssl.tar.gz",
+      "url": "https://raw.githubusercontent.com/LukeZGD/Legacy-iOS-Kit/23622f8fe72c09952089d5145a7b008cfcc90d9b/resources/jailbreak/openssl.tar.gz",
+      "sha256": "7b1c997fb9b320d7de401130e6fd37884807d5dcb6ceeca2b391c94b6a4e4d32"
+    },
+    {
+      "file": "cydiasubstrate.tar",
+      "url": "https://raw.githubusercontent.com/LukeZGD/Legacy-iOS-Kit/23622f8fe72c09952089d5145a7b008cfcc90d9b/resources/jailbreak/cydiasubstrate.tar",
+      "sha256": "b9e438729cbb3a8ceb8d885545facaff908c1e4f5ff463488e5b6cab198a854f"
+    },
+    {
+      "file": "fiona.deb",
+      "url": "https://julioverne.github.io/debfiles/com.julioverne.fiona_0.1_iphoneos-arm.deb",
+      "sha256": "157240459d4dbe0d7d1895bc84d6ca76d7b3698463699e299059adfec92c850f"
+    },
+    {
+      "file": "wifi-fix.zip",
+      "url": "https://raw.githubusercontent.com/DevTweaker/Tweak/1fbd9edaf0aaa3f87459b9d45b7b25bea0e76323/scs-wifi-fix-ios7_1.0.1_iphoneos-arm.deb.zip",
+      "sha256": "94248d40312c45698c6f52b7e718b9a02ae06b3246f9cb45d11ae779f87ef324"
+    }
+  ],
+  "sshURL": "https://github.com/LukeZGD/Legacy-iOS-Kit/files/14952123/iram.zip",
+  "sshTarSHA256": "e66dfef65a328302fb4d1618686ca89b7e86a76eb05b76f6408b70224aaa3f12",
+  "preferenceLoaderSHA256": "335fff25ff13021889ba856ce84fbc23ba25569f1c6cc65a3e113b433b1ed60f"
+}
